@@ -1,0 +1,16 @@
+<!--
+<form [formGroup]="signUpForm"></form> -->
+<h2>SignIn Form</h2>
+<form [formGroup]="signInForm" (ngSubmit)="mySign()">
+  <mat-card>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Email" formControlName="email" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password" matInput placeholder="Password" formControlName="password" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">SignIn</button>
+    <a color="primary" routerLink="/forgotPassword" routerLinkActive="router-link-active" >Forgotten Password? </a>
+  </mat-card>
+</form>
+

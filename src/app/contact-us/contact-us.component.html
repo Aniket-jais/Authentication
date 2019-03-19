@@ -1,0 +1,45 @@
+<h1>Contact our team for query and Feedback</h1>
+<mat-card>
+<form [formGroup]="contactUsForm" >
+
+    <mat-form-field>
+      <input placeholder="UserName" matInput type="text" required formControlName="userName" />
+    </mat-form-field>
+    <mat-form-field>
+      <input placeholder="EmailId" matInput type="email" required formControlName="email" />
+    </mat-form-field>
+
+    <!-- <mat-form-field>
+      <mat-label >Select</mat-label>
+      <mat-select (selectionChange)="fuc()" [(value)]="userChoice">
+        <mat-option  *ngFor="let option of options" [value]="option.value" formControlName="choice">
+          {{option.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field> -->
+    <mat-form-field>
+      <mat-label>Select an option</mat-label>
+      <mat-select (selectionChange)="fuc()" [(value)]="userChoice" formControlName="choice">
+
+        <mat-option value="query">Query</mat-option>
+        <mat-option value="feedback">Feedback</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="userChoice">
+      <textarea
+      matInput type="text"  formControlName="query"  rows="10" placeholder="query" >
+      </textarea>
+
+    </mat-form-field>
+
+    <mat-form-field *ngIf="userChoice">
+
+      <input matInput type="text"  formControlName="feedback"  placeholder="feedback" />
+
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">MailUs</button>
+
+</form>
+</mat-card>

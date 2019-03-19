@@ -1,0 +1,28 @@
+<h3>List of Heroes</h3>
+
+<div *ngFor="let hero of geta" class="styleAni">
+  <b>Heroname :</b> {{hero.heroName}}<br><b>HeroHeight :</b> {{hero.heroHeight}}
+  <br><b>FanFollowing :</b> {{hero.fanFollowing}}<br><b>FightsWon :</b> {{hero.fightsWon}}
+  <br><b>CanFly :</b> {{hero.canFly}}<br>
+  <b>HeroType :</b> {{hero.heroType}}<br><b>SuperPowers :</b> {{hero.superPowers}}
+  <div class="aniDiv">
+      <!-- <button type="button" class="btn btn-danger"value="delete" (click)="delete(hero)" id="deleteButton">Delete</button>
+      <button type="button"class="btn btn-success" value="edit" (click)="edit(hero)" id="editButton">Edit</button> -->
+
+      <button mat-raised-button color="primary" (click)="edit(hero)">Edit</button>
+      <button mat-raised-button color="warn" (click)="delete(hero)">Delete</button>
+  </div>
+  <br>
+</div>
+<!-- <p><b>List of Heroes</b></p>
+<mat-accordion multi="true">
+  <mat-expansion-panel *ngFor="let hero of geta" >
+    <mat-expansion-panel-header>Click me</mat-expansion-panel-header>
+    Heroname : {{hero.heroName}}<br>HeroHeight : {{hero.heroHeight}}<br>FanFollowing : {{hero.fanFollowing}}<br>FightsWon : {{hero.fightsWon}}<br>CanFly : {{hero.canFly}}<br>
+    HeroType : {{hero.heroType}}<br>SuperPowers : {{hero.superPowers}}
+    <mat-action-row>
+      <button mat-raised-button color="primary" (click)="edit(hero)">Edit</button>
+      <button mat-raised-button color="warn" (click)="delete(hero)">Delete</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion> -->

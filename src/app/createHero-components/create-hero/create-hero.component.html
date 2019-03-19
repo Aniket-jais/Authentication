@@ -1,0 +1,234 @@
+<!-- <div class="container">
+  <h2>Create Heroes</h2>
+  <form [formGroup]="heroForm" (ngSubmit)="onSubmit()" class="form-horizontal" >
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="heroName">Hero Name:</label>
+      <div class="col-sm-10">
+        <input type="text" formControlName="heroName" class="form-control" id="heroName" placeholder="Enter heroName" name="heroName">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="heroHeight">Hero Height:</label>
+      <div class="col-sm-10">
+        <input type="text" formControlName="heroHeight" class="form-control" id="heroHeight" placeholder="Enter heroHeight" name="heroHeight">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="canFly">Can Fly:</label>
+      <div class="col-sm-10">
+        <input type="radio" formControlName="canFly" name="canFly" value="true"> True<br>
+        <input type="radio"  formControlName="canFly" name="canFly" value="false"> False<br>
+    </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="canFly">HeroType:</label>
+      <div class="col-sm-10">
+        <input type="radio" formControlName="heroType" name="heroType" value="true"> True<br>
+        <input type="radio"  formControlName="heroType" name="heroType" value="false"> False<br>
+    </div>
+  </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="fanFollowing">Super Powers:</label>
+      <div class="col-sm-10">
+        <input type="text" formControlName="superPowers" class="form-control" id="superPowers" placeholder="Enter superpowers" name="superPowers">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="fanFollowing">Fan Following:</label>
+      <div class="col-sm-10">
+        <input type="text" formControlName="fanFollowing" class="form-control" id="fanFollowing" placeholder="Enter fanFollowing" name="fanFollowing">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="heroHeight">Fights won:</label>
+      <div class="col-sm-10">
+        <input type="text" formControlName="fightsWon" class="form-control" id="fightsWon" placeholder="Enter fightsWon" name="fightsWon">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-danger">Cancel</button>
+      </div>
+
+    </div>
+  </form>
+</div>  -->
+
+<form [formGroup]="heroForm" (ngSubmit)="onSubmit()" >
+  <mat-card>
+    <mat-form-field>
+      <input type="text" formControlName="heroName" matInput required placeholder="heroname">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" formControlName="heroHeight" matInput required placeholder="heroHeight">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" formControlName="superPowers" matInput required placeholder="superPowers">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" formControlName="fanFollowing" matInput required placeholder="fanFollowing">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" formControlName="fightsWon" matInput required placeholder="fightsWon">
+    </mat-form-field>
+
+    <label >HeroType:</label><br>
+      <input type="radio" formControlName="heroType" name="heroType" value="true"> True<br>
+        <input type="radio"  formControlName="heroType" name="heroType" value="false"> False<br>
+    <label >CanFly:</label><br>
+      <input type="radio" formControlName="canFly" name="canFly" value="true"> True<br>
+      <input type="radio"  formControlName="canFly" name="canFly" value="false"> False<br>
+
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button color="accent" type="submit">cancel</button>
+
+
+   </mat-card>
+</form>
+
+ <!-- <form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+  <mat-card>
+    <mat-form-field>
+      <input
+        type="text"
+        placeholder="heroName"
+        matInput
+
+        required
+        formControlName="heroName"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        placeholder="heroHeight"
+        matInput
+        type="text"
+        required
+        formControlName="heroHeight"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input type="radio" matInput formControlName="canFly" name="canFly" value="true"> True<br>
+      <input type="radio" matInput  formControlName="canFly" name="canFly" value="false"> False<br>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="radio" matInput formControlName="heroType" name="heroType" value="true"> True<br>
+      <input type="radio"  matInput formControlName="heroType" name="heroType" value="false"> False<br>
+
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        placeholder="superPowers"
+        matInput
+        type="text"
+        required
+        formControlName="superPowers"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        placeholder="fanFollowing"
+        matInput
+        type="text"
+        required
+        formControlName="fanFollowing"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        placeholder="fightsWon"
+        matInput
+        type="text"
+        required
+        formControlName="fightsWon"
+      />
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+    <button mat-raised-button color="accent" type="submit">cancel</button>
+  </mat-card>
+</form>
+
+
+ <form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+  <mat-card>
+    <mat-form-field>
+      <input
+        placeholder="heroName"
+        matInput
+        type="text"
+        required
+        formControlName="heroName"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        placeholder="heroHeight"
+        matInput
+        type="text"
+        required
+        formControlName="heroHeight"
+      />
+    </mat-form-field>
+    <mat-form-field>
+
+
+      <mat-radio-group >
+          <mat-radio-button formControlName="heroType" value="m">True</mat-radio-button>
+          <mat-radio-button  formControlName="heroType" value="f">false</mat-radio-button>
+        </mat-radio-group>
+    </mat-form-field>
+
+    <mat-form-field>
+
+
+      <mat-radio-group labelPosition="before">
+          <mat-radio-button formControlName="heroType" value="m">True</mat-radio-button>
+          <mat-radio-button  formControlName="heroType" value="f">false</mat-radio-button>
+        </mat-radio-group>
+
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        placeholder="superPowers"
+        matInput
+        type="number"
+        required
+        formControlName="superPowers"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        placeholder="fanFollowing"
+        matInput
+        type="text"
+        required
+        formControlName="fanFollowing"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        placeholder="Password"
+        matInput
+        type="text"
+        required
+        formControlName="text"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        placeholder="fightsWon"
+        matInput
+        type="password"
+        required
+        formControlName="fightsWon"
+      />
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">signUp</button>
+  </mat-card>
+</form> -->

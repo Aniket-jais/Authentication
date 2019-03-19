@@ -1,0 +1,10 @@
+[
+    {"heroName":"superMan", "heroHeight":6 , "fanFollowing":1000 , "fightsWon":20},
+    {"heroName":"batMan", "heroHeight":5 , "fanFollowing":600 , "fightsWon":10},
+    {"heroName":"ironMan", "heroHeight":9 , "fanFollowing":234 , "fightsWon":12},
+    {"heroName":"Aquaman", "heroHeight":7 , "fanFollowing":257 , "fightsWon":8},
+    {"heroName":"wonderWomen", "heroHeight":5 , "fanFollowing":1200 , "fightsWon":30}
+
+
+
+]
